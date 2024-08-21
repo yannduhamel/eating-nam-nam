@@ -64,7 +64,7 @@ function RecipeTabs() {
               <img src={recipe.recipe_image} alt={recipe.recipe_name} />
               <Link to={`/details/${recipe.recipe_id}`}>
                 <button type="button" className="buttonDetails">
-                  Details
+                  Détails
                 </button>
               </Link>
             </div>

@@ -1,4 +1,5 @@
 const { z } = require("zod");
+const xss = require("xss");
 
 const userRegex =
   /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,200}$/;
@@ -57,6 +58,12 @@ const validateUserSchema = (req, res, next) => {
     pseudo,
     email,
   });
+
+  req.body.firstname = xss(req.body.firstname);
+  req.body.lastname = xss(req.body.lastname);
+  req.body.password = xss(req.body.password);
+  req.body.pseudo = xss(req.body.pseudo);
+  req.body.email = xss(req.body.email);
 
   if (!validate.success) {
     const errors = validate.error.issues.reduce((acc, issue) => {

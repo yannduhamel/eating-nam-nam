@@ -16,6 +16,7 @@ export default function Navbar({ currentUser, setCurrentUser }) {
   return (
     <div className="navbar">
       <div className="menu-logo">
+        <Menu currentUser={currentUser} setCurrentUser={setCurrentUser} />
         <button
           className="logo-button"
           type="button"
@@ -27,7 +28,6 @@ export default function Navbar({ currentUser, setCurrentUser }) {
             alt="logo del sitio"
           />
         </button>
-        <Menu currentUser={currentUser} setCurrentUser={setCurrentUser} />
       </div>
       <Searchbar />
       {currentUser ? (

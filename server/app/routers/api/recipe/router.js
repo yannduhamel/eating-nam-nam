@@ -17,13 +17,9 @@ const {
 const validateRecipeSchema = require("../../../middlewares/validateRecipeSchema");
 
 router.get("/", browse);
-
 router.get("/:id", read);
-
 router.put("/:id", edit);
-
 router.post("/", validateRecipeSchema, add);
-
 router.delete("/:id", destroy);
 
 /* ************************************************************************* */

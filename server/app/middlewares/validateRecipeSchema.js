@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 const { z } = require("zod");
+const xss = require("xss");
 
 const recipeNameRegex = /^([A-Z][A-Za-z ,.'`-]{3,150})$/;
 
@@ -40,6 +41,12 @@ const validateRecipeSchema = (req, res, next) => {
     image,
     set_up_time: Number(set_up_time),
   });
+
+  req.body.name = xss(req.body.name);
+  req.body.number_of_people = xss(req.body.number_of_people);
+  req.body.description = xss(req.body.description);
+  req.body.image = xss(req.body.image);
+  req.body.set_up_time = xss(req.body.set_up_time);
 
   if (!validate.success) {
     const errors = validate.error.issues.reduce((acc, issue) => {

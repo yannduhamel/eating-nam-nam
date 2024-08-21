@@ -1,3 +1,9 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
 @font-face {
   font-family: "now-light";
   src: url("/fonts/now.light.otf");
@@ -13,38 +19,28 @@
 
 .backButton {
   display: flex;
-  font-family: "now-medium";
-  padding: 5px 8px;
-  font-size: 11px;
-  color: black;
-  background-color: white;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 0rem 0rem 0rem 1rem;
   align-items: center;
-}
-.arrow {
-  width: 30px;
-  margin-right: 8px;
+  background-color: var(--main-color);
+  color: black;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "now-medium";
 }
 
-@media screen and (min-width: 768px) {
+.backButton:hover {
+  background-color: var(--second-color);
+  color: var(--third-color);
+}
+
+@media screen and (min-width: 1201px) {
   .backButton {
-    display: flex;
-    font-family: "now-medium";
-    padding: 5px 20px;
-    font-size: 14px;
-    color: black;
-    background-color: white;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 2rem 0rem 1rem 2rem;
-    align-items: center;
-  }
-  .arrow {
-    width: 40px;
-    margin-right: 15px;
+    font-size: 17px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    margin-left: 2rem;
   }
 }

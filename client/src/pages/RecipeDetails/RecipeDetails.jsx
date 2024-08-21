@@ -33,7 +33,7 @@ function RecipeDetails() {
             😋 Nombre de personnes : {recipe_number_of_people}
           </button>
           <button type="button" className="numberPeople">
-            ⏰ Temps : {set_up_time}´
+            ⏰ Temps de préparation : {set_up_time}´
           </button>
         </div>
         <img
@@ -47,7 +47,7 @@ function RecipeDetails() {
             📅 Ajouter au planning
           </button>
           <button type="button" className="favoris">
-            Mettre en favoris 🧡
+            🧡 Ajouter aux favoris
           </button>
         </div>
 
@@ -71,9 +71,6 @@ function RecipeDetails() {
         <div className="lineContainer">
           <h2 className="recipeTitle">Recette</h2>
           <div className="customLine" />
-
-          <p className="recipeDescription">{recipe_description}</p>
-
           <p className="recipeDescription">{recipe_description}</p>
         </div>
         <div className="lineContainer">
