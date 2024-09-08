@@ -57,7 +57,7 @@ export default function IngredientPage() {
       toast.success("Votre formulaire a bien été soumis");
     } catch (err) {
       console.error(err);
-      toast.error("Une erreur es survenue, veuillez réessayer ultérieurement");
+      toast.error("Une erreur est survenue, veuillez réessayer ultérieurement");
     }
   };
 

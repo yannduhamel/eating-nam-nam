@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         loader: () => fetch(`${express}/api/recipe-label`),
       },
       {
-        path: "details/:id",
+        path: "/details/:id",
         element: <RecipeDetails />,
         loader: ({ params }) => fetch(`${express}/api/recipe/${params.id}`),
       },
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         loader: () => fetch(`${express}/api/ingredient`),
       },
       {
-        path: "/ingredient",
+        path: "/ajout-ingredient",
         element: <IngredientPage />,
       },
       {
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         loader: () => fetch(`${express}/api/recipe`),
       },
       {
-        path: "/admin/ingredients",
+        path: "/admin/ingredient",
         element: <AdminIngredientsPage />,
         loader: () => fetch(`${express}/api/ingredient`),
       },
