@@ -44,7 +44,7 @@ export default function AdminIngredientsPage() {
     <div className="ingredients-body">
       <div className="high-page-ingredient">
         <BackButton />
-        <NavLink to="/ingredient" className="btn-add-ingredient">
+        <NavLink to="/ajout-ingredient" className="btn-add-ingredient">
           Ajouter un nouvel ingrédient
         </NavLink>
       </div>

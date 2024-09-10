@@ -234,7 +234,7 @@ export default function AddRecipePage() {
                 inputProps={inputProps}
                 onSuggestionSelected={eventEnter}
               />
-              <NavLink to="/ingredient" className="newIngredient">
+              <NavLink to="/ajout-ingredient" className="newIngredient">
                 {" "}
                 Créez un ingrédient s'il n'existe pas
               </NavLink>
